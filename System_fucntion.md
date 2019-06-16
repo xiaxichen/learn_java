@@ -8,5 +8,11 @@
 ###demo
 ```java
 Scanner input = new Scanner(System.in)
-int line = input.nextInt()
+if (input.hasNext()){
+    int line = input.nextInt();
+}
+input.close();
 ```
+##scan.hasNext()
+判断是否有输入
+
