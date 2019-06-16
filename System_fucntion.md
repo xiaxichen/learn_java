@@ -16,3 +16,9 @@ input.close();
 ##scan.hasNext()
 判断是否有输入
 
+##Random
+随机数
+```java
+Random r = new Random()//创建一个可以生成随机数的实例
+r.nextInt(50)
+```
