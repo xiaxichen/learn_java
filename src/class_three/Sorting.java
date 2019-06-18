@@ -4,12 +4,13 @@ import java.util.Arrays;
 
 public class Sorting {
     public static void main(String[] args) {
-        int[] nums = {24, 34, 5, 4, 17, 90};
+        int[] nums = {24, 34, 5, 4, 17, 90, 100, 300, 10, 15};
         System.out.println(Arrays.toString(bubbleSort(nums)));
         System.out.println("-------------");
         System.out.println(Arrays.toString(selectionSort(nums)));
         System.out.println("-------------");
-        System.out.println(Arrays.toString(Insertion_sort(nums)));
+        System.out.println(Arrays.toString(InsertionSort(nums)));
+        System.out.println(binarySearch(nums, 34));
     }
 
     public static int[] bubbleSort(int[] nums) {
@@ -45,7 +46,7 @@ public class Sorting {
         return nums;
     }
 
-    public static int[] Insertion_sort(int[] nums) {
+    public static int[] InsertionSort(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
             int temp = nums[i];//记录操作数
             int k = 0;
@@ -61,5 +62,21 @@ public class Sorting {
             }
         }
         return nums;
+    }
+
+    public static int binarySearch(int[] nums, int key) {
+        int start = 0;//开始下标
+        int end = nums.length - 1;//结束下标
+        while (start <= end) {
+            int middle = (start + end) >>> 1;//等于除二或无符号位移1位
+            if (nums[middle] > key) {
+                end = middle - 1;
+            } else if (nums[middle] < key) {
+                start = middle + 1;
+            } else {
+                return middle;
+            }
+        }
+        return -1;
     }
 }
