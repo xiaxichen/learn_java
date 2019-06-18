@@ -10,7 +10,10 @@ public class Sorting {
         System.out.println(Arrays.toString(selectionSort(nums)));
         System.out.println("-------------");
         System.out.println(Arrays.toString(InsertionSort(nums)));
+        System.out.println("-------------");
         System.out.println(binarySearch(nums, 34));
+        System.out.println("-------------");
+        System.out.println(Arrays.binarySearch(nums, 34));
     }
 
     public static int[] bubbleSort(int[] nums) {
