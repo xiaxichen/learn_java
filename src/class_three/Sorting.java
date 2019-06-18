@@ -2,12 +2,14 @@ package class_three;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class Sorting {
     public static void main(String[] args) {
         int[] nums = {24, 34, 5, 4, 17, 90};
         System.out.println(Arrays.toString(bubbleSort(nums)));
         System.out.println("-------------");
         System.out.println(Arrays.toString(selectionSort(nums)));
+        System.out.println("-------------");
+        System.out.println(Arrays.toString(Insertion_sort(nums)));
     }
 
     public static int[] bubbleSort(int[] nums) {
@@ -38,6 +40,24 @@ public class BubbleSort {
                 nums[minIndex] = nums[minIndex] + nums[i];
                 nums[i] = nums[minIndex];
                 nums[minIndex] = nums[minIndex] - nums[i];
+            }
+        }
+        return nums;
+    }
+
+    public static int[] Insertion_sort(int[] nums) {
+        for (int i = 1; i < nums.length; i++) {
+            int temp = nums[i];//记录操作数
+            int k = 0;
+            for (k = i - 1; k >= 0; k--) {
+                if (nums[k] > temp) {
+                    nums[k + 1] = nums[k];
+                } else {
+                    break;
+                }
+            }
+            if (nums[k] != temp) {
+                nums[k + 1] = temp;
             }
         }
         return nums;
