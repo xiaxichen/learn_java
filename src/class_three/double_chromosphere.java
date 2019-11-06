@@ -24,7 +24,6 @@ public class double_chromosphere {
         //游戏开始 系统提示
         System.out.println("双色球游戏开始！good luck！");
         System.out.println("请问您是要计算还是手选（机选：1，手选：2）");
-
         Scanner input = new Scanner(System.in);
         boolean flag = true;
         while (flag) {
@@ -56,19 +55,7 @@ public class double_chromosphere {
         computerSelection(redBall, sysRedBall);
         //蓝球
         sysBuleBall = r.nextInt(16) + 1;
-
         //统计结果
-//        for (int i = 0; i < userRedBall.length; i++) {
-//            for (int j = 0; j < sysRedBall.length - redCount; j++) {
-//                if (userRedBall[i] == sysRedBall[j]) {
-//                    int temp = sysRedBall[j];
-//                    sysRedBall[j] = sysRedBall[sysRedBall.length - 1 - redCount];
-//                    sysRedBall[sysRedBall.length - 1 - redCount] = temp;
-//                    redCount++;
-//                    break;
-//                }
-//            }
-//        }
         for (int ball:userRedBall
              ) {
             for (int j = 0; j < sysRedBall.length - redCount; j++) {
