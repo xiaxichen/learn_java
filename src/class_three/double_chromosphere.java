@@ -50,6 +50,7 @@ public class double_chromosphere {
 
             }
         }
+        
         //系统随机生成号码
         //红球
         computerSelection(redBall, sysRedBall);
